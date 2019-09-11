@@ -23,7 +23,7 @@ public:
         int i = 0, j = 0, res = INT_MAX;
         while (i < m[word1].size() && j < m[word2].size()) {
             res = min(res, abs(m[word1][i] - m[word2][j]));
-            m[word1[i]] < m[word2][j] ? ++i : ++j;
+            m[word1][i] < m[word2][j] ? ++i : ++j;
         }
         return res;
     }
