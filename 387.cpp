@@ -1,4 +1,25 @@
-//
-// Created by bdwms on 2019/9/13.
-//
+#include <iostream>
+#include <vector>
+#include <unordered_map>
 
+using namespace std;
+
+class Solution {
+public:
+    int firstUniqChar(string s) {
+        unordered_map<char, int> m;
+        for (int i = 0; i < s.size(); i++) {
+            m[s[i]]++;
+        }
+        for (int i = 0; i < s.size(); i++) {
+            if (m[s[i]] == 1)
+                return i;
+        }
+        return -1;
+    }
+};
+
+int main() {
+
+    return 0;
+}
