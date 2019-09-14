@@ -6,12 +6,16 @@ using namespace std;
 
 class Solution {
 public:
-    int hammingDistance(int x, int y) {
-        int res = 0, exc = x ^ y;
-        for (int i = 0; i < 32; ++i) {
-            res += (exc >> i) & 1;  //与1表示当最低位为1时得到1
+    int firstUniqChar(string s) {
+        unordered_map<char, int> m;
+        for (int i = 0; i < s.size(); i++) {
+            m[s[i]]++;
         }
-        return res;
+        for (int i = 0; i < s.size(); i++) {
+            if (m[s[i]] == 1)
+                return i;
+        }
+        return -1;
     }
 };
 
