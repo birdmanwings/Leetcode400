@@ -5,10 +5,11 @@
 
 using namespace std;
 
-/**
+/*
  * 栈
+ * 时间复杂度O(n)
+ * 空间复杂度O(n)
  */
-
 class Solution {
 public:
     bool isValid(string s) {
