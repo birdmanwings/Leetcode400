@@ -5,6 +5,9 @@
 
 using namespace std;
 
+/*
+ * 这一题只能用一次数字
+ */
 class Solution {
 public:
     vector<vector<int>> combinationSum2(vector<int> &candidates, int target) {
@@ -24,11 +27,11 @@ public:
             return;
         }
         for (int i = start; i < candidates.size(); i++) {
-            if (i > start && candidates[i] == candidates[i - 1]) {
+            if (i > start && candidates[i] == candidates[i - 1]) {  // 跳过重复的数字
                 continue;
             }
             out.push_back(candidates[i]);
-            combinationSum2DFS(candidates, target - candidates[i], i + 1, res, out);
+            combinationSum2DFS(candidates, target - candidates[i], i + 1, res, out);  // 注意加1来直接跳过重复
             out.pop_back();
         }
     }
