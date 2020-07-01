@@ -22,6 +22,7 @@ public:
             }
         }
         s.resize(wordIndex);
+        return s;
     }
 };
 
