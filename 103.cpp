@@ -33,7 +33,7 @@ public:
         if (!root) {
             return;
         }
-        if (res.size() == level) {
+        if (res.size() == level) {  //新建每层的数组
             res.push_back({});
         }
         res[level].push_back(root->val);

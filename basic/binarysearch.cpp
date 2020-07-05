@@ -3,8 +3,12 @@
 //
 #include "iostream"
 #include "vector"
+
 using namespace std;
 
+/*
+ * 这篇文章把二分搜索讲的很清除https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/solution/er-fen-cha-zhao-suan-fa-xi-jie-xiang-jie-by-labula/
+ */
 int binarySearch(vector<int> &nums, int target) {
   int left = 0, right = nums.size() - 1;
   while (left <= right) {

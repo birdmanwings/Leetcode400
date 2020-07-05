@@ -4,6 +4,9 @@
 
 using namespace std;
 
+/*
+ * 逆向思维来做dp,我从最后一行往上做dp
+ */
 class Solution {
 public:
     int minimumTotal(vector<vector<int>>& triangle) {
