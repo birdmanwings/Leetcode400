@@ -18,7 +18,7 @@ class Solution {
   int lengthOfLongestSubstring(string s) {
     int res = 0, left = 0, right = 0, len = s.size();
     unordered_set<char> st;
-    while (res < len - left) {
+    while (res < len - left) {  // right < len 说实话这个约束条件更好理解点
       if (!st.count(s[right])) {
         st.insert(s[right++]);
         res = max(res, (int) st.size());
